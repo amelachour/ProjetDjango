@@ -7,7 +7,10 @@ Copyright (c) 2019 - present AppSeed.us
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm, SignUpForm
+<<<<<<< HEAD
 from apps.cours.models import Cours 
+=======
+>>>>>>> c4f4019b0ff2ad6983f6bd24f6b5f3e4a8431bde
 
 
 def login_view(request):
@@ -55,7 +58,10 @@ def register_user(request):
         form = SignUpForm()
 
     return render(request, "accounts/register.html", {"form": form, "msg": msg, "success": success})
+<<<<<<< HEAD
 
 def course_list(request):
     courses = Cours.objects.all() 
     return render(request, "accounts/course_list.html", {"courses": courses})
+=======
+>>>>>>> c4f4019b0ff2ad6983f6bd24f6b5f3e4a8431bde

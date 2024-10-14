@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.core.paginator import Paginator
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
@@ -20,18 +21,36 @@ def course_list(request):
     except Exception as e:
         logger.error(f"Erreur capturée dans course_list: {str(e)}")
         return HttpResponse(f"Une erreur est survenue : {str(e)}")
+=======
+from django.shortcuts import render, redirect
+from .forms import CourseForm
+from .models import Cours
+from django.contrib.auth.decorators import login_required
+
+
+
+def course_list(request):
+    courses = Cours.objects.all()
+    return render(request, "courses\course_list.html", {"courses": courses})
+
+>>>>>>> c4f4019b0ff2ad6983f6bd24f6b5f3e4a8431bde
 
 def add_course(request):
     if request.method == 'POST':
         form = CourseForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+<<<<<<< HEAD
             return redirect('listcourses') 
+=======
+            return redirect('course_list')
+>>>>>>> c4f4019b0ff2ad6983f6bd24f6b5f3e4a8431bde
     else:
         form = CourseForm()
     return render(request, "courses/add_course.html", {"form": form})
 
 
+<<<<<<< HEAD
 from django.shortcuts import get_object_or_404
 
 def update_course(request, pk):
@@ -54,3 +73,5 @@ def delete_course(request, pk):
         course.delete()  
         return redirect('listcourses') 
     return render(request, "courses/delete_course.html", {"course": course})
+=======
+>>>>>>> c4f4019b0ff2ad6983f6bd24f6b5f3e4a8431bde

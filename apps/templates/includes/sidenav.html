@@ -22,6 +22,7 @@
           <h6 class="navbar-heading text-muted">Components</h6>
 
           <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link"  href="{% url 'listcourses' %}" >
                 <i class="ni ni-books text-primary"></i>
                 <span class="nav-link-text">Cours</span>
@@ -29,6 +30,19 @@
         </li>
         
         
+=======
+            <a class="nav-link {% if 'map' in segment %} active {% endif %}" href="{% url 'course_list' %}">
+              <i class="ni ni-books text-primary"></i>
+              <span class="nav-link-text">Cours</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if 'map' in segment %} active {% endif %}" href="#">
+              <i class="ni ni-check-bold text-primary"></i>
+              <span class="nav-link-text">Quiz</span>
+            </a>
+          </li>
+>>>>>>> c4f4019b0ff2ad6983f6bd24f6b5f3e4a8431bde
           <li class="nav-item">
             <a class="nav-link {% if 'map' in segment %} active {% endif %}" href="#">
               <i class="ni ni-book-bookmark text-primary"></i>

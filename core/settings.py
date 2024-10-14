@@ -15,6 +15,10 @@ CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY', default='S#perS3crEt_1122')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+<<<<<<< HEAD
+=======
+DEBUG = config('DEBUG', default=True, cast=bool)
+>>>>>>> c4f4019b0ff2ad6983f6bd24f6b5f3e4a8431bde
 DEBUG = True
 
 # load production server from .env
@@ -23,7 +27,10 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', config('SERVER', default='127.0.0.1')
 # Application definition
 
 INSTALLED_APPS = [
+<<<<<<< HEAD
     'apps.cours', 
+=======
+>>>>>>> c4f4019b0ff2ad6983f6bd24f6b5f3e4a8431bde
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -31,8 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.home' , 
+<<<<<<< HEAD
     'django_extensions',
 
+=======
+    'apps.cours', 
+>>>>>>> c4f4019b0ff2ad6983f6bd24f6b5f3e4a8431bde
 ]
 
 MIDDLEWARE = [
@@ -46,6 +57,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+<<<<<<< HEAD
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -70,6 +82,12 @@ ROOT_URLCONF = 'core.urls'
 LOGIN_REDIRECT_URL = "home"  # Route defined in home/urls.py
 LOGOUT_REDIRECT_URL = "home"  # Route defined in home/urls.py
 TEMPLATE_DIR = os.path.join(CORE_DIR, "apps/templates")  
+=======
+ROOT_URLCONF = 'core.urls'
+LOGIN_REDIRECT_URL = "home"  # Route defined in home/urls.py
+LOGOUT_REDIRECT_URL = "home"  # Route defined in home/urls.py
+TEMPLATE_DIR = os.path.join(CORE_DIR, "apps/templates")  # ROOT dir for templates
+>>>>>>> c4f4019b0ff2ad6983f6bd24f6b5f3e4a8431bde
 
 TEMPLATES = [
     {
@@ -87,7 +105,10 @@ TEMPLATES = [
     },
 ]
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c4f4019b0ff2ad6983f6bd24f6b5f3e4a8431bde
 WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
